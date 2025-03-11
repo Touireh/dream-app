@@ -1,10 +1,11 @@
 body {
   margin: 0;
-  overflow: hidden;
+  overflow: hidden; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
   "Helvetica Neue", Arial, sans-serif;
 }
 
+/* Conteneur principal */
 .container {
   display: flex;
   height: 100vh;
@@ -12,34 +13,42 @@ body {
   position: relative;
 }
 
+/* Section gauche contenant le formulaire */
 .leftSection {
   background: #7FABAE;
   color: white;
   padding: 3rem;
-  width: 40% ;
+  width: 40%;
   height: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Séparateur en vague */
 .waveDivider {
   --divider-width: 60px;
   position: relative;
   width: var(--divider-width);
   height: 100%;
   z-index: 2;
-  
 }
 
 .waveDivider svg path {
-  fill: #7FABAE;
+  fill: #7FABAE; /* Couleur correspondant à la section gauche */
 }
 
+/* Section droite contenant les étapes */
 .rightSection {
   background: white;
   padding: 3rem;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 60%;
 }
+
+/* Style de la vague */
 .waveSvg {
   height: 100vh;
   width: 100%;
@@ -49,29 +58,32 @@ body {
   fill: #7FABAE;
 }
 
-
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
+  /* Masquer la section gauche sur mobile */
   .leftSection {
     display: none;
-    
   }
-  .waveDivider{
+
+  /* Cacher la vague en mobile */
+  .waveDivider {
     width: 0;
   }
-  .waveSvg{
-    display: none;
-  }
-  .rightSection{
-    padding: 0;
-    margin-left: 0%;
-  }
+
   .waveSvg {
     display: none;
   }
-  body{
-     overflow: auto;
-     margin: 4%;
+
+  /* Ajustement de la section droite */
+  .rightSection {
+    padding: 1rem;
+    width: 100%;
+    justify-content: flex-start;
   }
 
-
+  /* Permet le défilement sur mobile */
+  body {
+    overflow: auto;
+    padding: 4%;
+  }
 }

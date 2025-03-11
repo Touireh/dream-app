@@ -8,12 +8,7 @@ export default function FormSection({ formState, onUpdate }) {
 
   return (
     <section className={styles.formSection} >
-      <img src='images/image 2.png' className={styles.logo} />
-      <div className={styles.backgroundContainer}>
-        <div className={styles.circle1}></div>
-        <div className={styles.circle2}></div>
-        <div className={styles.circle3}></div>
-      </div>
+      <img src='images/image-2.png' className={styles.logo} />
       <Header/>
       <div className={styles.formGroup}>
         <label htmlFor="name" className={styles.title} >Nom et prénom :</label>
@@ -33,7 +28,6 @@ export default function FormSection({ formState, onUpdate }) {
           value={formState.intention}
           onChange={handleInputChange('intention')}
           placeholder="Mon"
-          rows="3"
           required
         />
       </div>

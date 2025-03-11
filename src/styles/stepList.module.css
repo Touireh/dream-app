@@ -1,88 +1,104 @@
-.steps{
-    padding-top: 10%;
-    border-radius:  90% 0 0 0;
-    height: 100vh;
-   
-  }
-  /* Conteneur principal */
+/* Section principale contenant les étapes */
+.steps {
+  padding-top: 10%;
+  border-radius: 90% 0 0 0;
+  height: 100vh;
+}
+
+/* Conteneur de la liste des étapes */
+.stepsglobal {
+  padding-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+}
+
+/* Élément individuel d'une étape */
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+
+/* Icône associée à une étape */
+.stepIcon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+/* Contenu textuel d'une étape */
+.stepContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Numéro de l'étape */
+.stepNumber {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Texte descriptif de l'étape */
+.stepText {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Conteneur du bouton menu */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: end;
+}
+
+/* Bouton pour ouvrir le menu */
+.menuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icône du menu */
+.menuButton img {
+  width: 8vh;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Message affiché si aucune étape n'est disponible */
+.emptyMessage {
+  text-align: center;
+  font-style: italic;
+  color: gray;
+  margin-top: 20px;
+}
+
+/* RESPONSIVE - Affichage sur petits écrans */
+@media (max-width: 768px) {
   .stepsglobal {
-    padding-top: 5%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    margin: auto;    
-  }
-
-
-/* Liste des étapes */
-.stepsList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Élément de la liste */
-  .stepItem {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  
-  /* Icônes des étapes */
-  .stepIcon {
-    width: 50px;
-    height: 50px;
-    flex-shrink: 0;
-  }
-  
-  /* Contenu de l'étape */
-  .stepContent {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  /* Texte de l'étape */
-  .stepText {
-    font-size: 1rem;
-    color: #555;
-  }
-  .container {
-    display: grid;
     grid-template-columns: 1fr;
-    justify-items: end; 
   }
-  
-  .menuButton {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
+
+  .container {
+    display: none;
+  }
+
+  .stepItem {
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
   }
-  
-  .menuButton img {
-    width: 8vh;
-    height: auto;
-    transition: transform 0.2s ease-in-out;
+
+  .stepIcon {
+    width: 40px;
+    height: 40px;
   }
-  /* RESPONSIVE (1 colonne en mobile) */
-  @media (max-width: 768px) {
-    .stepsglobal {
-      grid-template-columns: 1fr;
-    }
-    .container{
-      display: none;
-    }
-  
-    .stepItem {
-      flex-direction: row;
-      align-items: center;
-    }
-  
-    .stepIcon {
-      width: 40px;
-      height: 40px;
-    }
-  }
+}

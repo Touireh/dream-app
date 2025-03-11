@@ -1,15 +1,14 @@
 import styles from '../styles/stepList.module.css';
 import Button from './Button';
-
-
+import StepItem from './StepItem';
 
 export default function StepList({ steps }) {
   return (
     <section className={styles.steps}>
       <div className={styles.container}>
-      <button className={styles.menuButton} onClick={() => console.log('Menu ouvert')}>
-        <img src='icons/menu.svg' alt="Menu" />
-      </button>
+        <button className={styles.menuButton} onClick={() => console.log('Menu ouvert')}>
+          <img src="/icons/menu.svg" alt="Menu" />
+        </button>
       </div>
       <h2 className={styles.sectionTitle}>Votre Shynleï c'est...</h2>
       <p className={styles.sectionSubtitle}>
@@ -18,22 +17,16 @@ export default function StepList({ steps }) {
       </p>
 
       <div className={styles.stepsglobal}>
-        {steps.map(step => (
-          <div key={step.id} className={styles.stepItem}>
-            <img 
-              src={step.icon} 
-              alt={`Icône étape ${step.id}`} 
-              className={styles.stepIcon}
-            />
-            <div className={styles.stepContent}>
-              <span className={styles.stepNumber}>{step.id}.</span>
-              <p className={styles.stepText}>{step.text}</p>
-            </div>
-          </div>
-        ))}
+        {steps && steps.length > 0 ? (
+          steps.map((step) => (
+            <StepItem key={step.id} id={step.id} icon={step.icon} text={step.text} />
+          ))
+        ) : (
+          <p className={styles.emptyMessage}>Aucune étape disponible.</p>
+        )}
       </div>
-        <div className={styles.test}></div>
-      <Button/>
+      
+      <Button />
     </section>
   );
 }

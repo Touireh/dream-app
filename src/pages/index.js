@@ -13,10 +13,11 @@ export default function ShynleiPage() {
 
   return (
     <div className={styles.container}>
+      {/* Section gauche contenant le formulaire */}
       <div className={styles.leftSection}>
         <FormSection formState={formState} onUpdate={setFormState} />
       </div>
-
+      {/* Séparateur en vague entre les sections */}
       <div className={styles.waveDivider}>
         <svg
           className={styles.waveSvg}
@@ -30,6 +31,7 @@ export default function ShynleiPage() {
         </svg>
       </div>
 
+      {/* Section droite contenant la liste des étapes */}
       <div className={styles.rightSection}>
         <StepList steps={STEPS_DATA} />
       </div>

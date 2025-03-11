@@ -1,0 +1,88 @@
+.steps{
+    padding-top: 10%;
+    border-radius:  90% 0 0 0;
+    height: 100vh;
+   
+  }
+  /* Conteneur principal */
+  .stepsglobal {
+    padding-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    margin: auto;    
+  }
+
+
+/* Liste des étapes */
+.stepsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Élément de la liste */
+  .stepItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  /* Icônes des étapes */
+  .stepIcon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+  }
+  
+  /* Contenu de l'étape */
+  .stepContent {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Texte de l'étape */
+  .stepText {
+    font-size: 1rem;
+    color: #555;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: end; 
+  }
+  
+  .menuButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menuButton img {
+    width: 8vh;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+  }
+  /* RESPONSIVE (1 colonne en mobile) */
+  @media (max-width: 768px) {
+    .stepsglobal {
+      grid-template-columns: 1fr;
+    }
+    .container{
+      display: none;
+    }
+  
+    .stepItem {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .stepIcon {
+      width: 40px;
+      height: 40px;
+    }
+  }

@@ -1,0 +1,70 @@
+.header {
+    width: 50%;
+    padding-top: 100%;
+}
+
+.subtitle {
+    font-size: 14px;
+}
+
+.logo {
+    width: 12%;
+    margin-bottom: 10%;
+}
+
+/* Conteneur général du formulaire */
+.formSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    padding-left: 10%;
+}
+
+/* En-tête */
+.title {
+    font-size: 1.5rem;
+}
+.subSubTitle{
+    font-size: 14px;
+    padding-top: 3%;
+    color: rgba(231, 235, 237, 0.863);
+}
+
+/* Groupe contenant un champ de formulaire */
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 3rem;
+}
+
+/* Champ de saisie */
+.formGroup input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Placeholder visible */
+.formGroup input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Ajustements pour le responsive */
+@media (max-width: 768px) {
+    
+    .formSection {
+        display: none;
+    }
+
+    .formGroup {
+        max-width: 100%;
+    }
+}

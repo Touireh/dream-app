@@ -1,0 +1,42 @@
+/* Bouton principal */
+.buttonContainer {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    width: 100%;
+    margin-top: 1.5rem; /* Espacement du haut */
+    
+  }
+  .ctaButton {
+    background-color: #6a9ea4; /* Couleur du bouton */
+    justify-self: center;
+    color: white;
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Effet de clic */
+  .ctaButton:active {
+    transform: scale(0.95);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .formSection {
+      padding: 2rem;
+      border-radius: 0 30% 30% 0;
+    }
+  
+    .formGroup {
+      max-width: 100%;
+    }
+  
+    .ctaButton {
+      width: 50%;
+      text-align: center;
+    }
+  }
+  
